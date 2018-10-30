@@ -7,6 +7,7 @@
   "author": "Martin Allgood <martintallgood@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^3.0.2",
     "express": "^4.16.4",
     "mongoose": "^5.3.7"
   }
