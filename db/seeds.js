@@ -4,7 +4,7 @@ const { dbURI }= require('../config/environment');
 const User = require('../models/user');
 
 mongoose.connect(dbURI, (err, db) => {
-  db.dropdatabse()
+  db.dropDatabase()
     .then(() => User.create([{
       username: 'userOne',
       email: 'a@a',
@@ -21,7 +21,7 @@ mongoose.connect(dbURI, (err, db) => {
       password: 'three',
       passwordConfirmation: 'three'
     }]))
-    .then(users => console.log(`${users.length} kendoka created`))
+    .then(users => console.log(`${users.length} user(s) created`))
     .catch(err => console.log(err))
     .finally(() => mongoose.connection.close());
 });
